@@ -54,6 +54,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         let identifier = categoryList[indexPath.section][indexPath.row]
         let storyboard = UIStoryboard(name: identifier, bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: identifier+"ViewController")
