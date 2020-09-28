@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F43CE5872522255300A995F6 /* CustomTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43CE5862522255300A995F6 /* CustomTextFieldViewController.swift */; };
+		F43CE58B2522256800A995F6 /* CustomTextField.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43CE58A2522256800A995F6 /* CustomTextField.storyboard */; };
 		F44B9BC7248CB8BD00761436 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44B9BC6248CB8BD00761436 /* AppDelegate.swift */; };
 		F44B9BC9248CB8BD00761436 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44B9BC8248CB8BD00761436 /* SceneDelegate.swift */; };
 		F44B9BCB248CB8BD00761436 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44B9BCA248CB8BD00761436 /* MainViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F43CE5862522255300A995F6 /* CustomTextFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldViewController.swift; sourceTree = "<group>"; };
+		F43CE58A2522256800A995F6 /* CustomTextField.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomTextField.storyboard; sourceTree = "<group>"; };
 		F44B9BC3248CB8BD00761436 /* SwiftGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F44B9BC6248CB8BD00761436 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F44B9BC8248CB8BD00761436 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +41,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F43CE584252224E000A995F6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F43CE5862522255300A995F6 /* CustomTextFieldViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F43CE5852522251500A995F6 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F43CE58A2522256800A995F6 /* CustomTextField.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		F44B9BBA248CB8BD00761436 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +76,8 @@
 		F44B9BC5248CB8BD00761436 /* SwiftGuide */ = {
 			isa = PBXGroup;
 			children = (
+				F43CE5852522251500A995F6 /* Storyboards */,
+				F43CE584252224E000A995F6 /* Controllers */,
 				F44B9BC6248CB8BD00761436 /* AppDelegate.swift */,
 				F44B9BC8248CB8BD00761436 /* SceneDelegate.swift */,
 				F44B9BCA248CB8BD00761436 /* MainViewController.swift */,
@@ -94,7 +116,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Ting-chien Wang";
 				TargetAttributes = {
 					F44B9BC2248CB8BD00761436 = {
@@ -126,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F44B9BD3248CB8BF00761436 /* LaunchScreen.storyboard in Resources */,
+				F43CE58B2522256800A995F6 /* CustomTextField.storyboard in Resources */,
 				F44B9BD0248CB8BF00761436 /* Assets.xcassets in Resources */,
 				F44B9BCE248CB8BD00761436 /* Main.storyboard in Resources */,
 			);
@@ -139,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F44B9BCB248CB8BD00761436 /* MainViewController.swift in Sources */,
+				F43CE5872522255300A995F6 /* CustomTextFieldViewController.swift in Sources */,
 				F44B9BC7248CB8BD00761436 /* AppDelegate.swift in Sources */,
 				F44B9BC9248CB8BD00761436 /* SceneDelegate.swift in Sources */,
 			);
@@ -192,6 +216,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -252,6 +277,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

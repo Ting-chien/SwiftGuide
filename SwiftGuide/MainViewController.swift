@@ -13,8 +13,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var tableView: UITableView!
     
     let categoryList = [
-        ["UILabel", "TextView", "HTML"],
-        ["CommonCrypto", "JSONParser", "XMLParser"]
+        ["CustomTextField"]
     ]
 
     override func viewDidLoad() {
@@ -33,9 +32,9 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         switch section {
         case 0:
-            return "UI"
+            return "UIKit related SDK"
         case 1:
-            return "Function"
+            return "Functional applied"
         default:
             return nil
         }
@@ -53,7 +52,13 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         return cell
     }
-
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let identifier = categoryList[indexPath.section][indexPath.row]
+        let storyboard = UIStoryboard(name: identifier, bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: identifier+"ViewController")
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
 
 }
 
