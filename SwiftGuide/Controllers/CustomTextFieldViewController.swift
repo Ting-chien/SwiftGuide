@@ -40,7 +40,7 @@ class CustomTextFieldViewController: UIViewController {
         cardField3.keyboardType = .numberPad
         
         // TextField4
-        cardField4.isSecureTextEntry = true
+        cardField4.isSecure = true
         
         textFields = TextFieldManager(textFields: [cardField1, cardField2, cardField3, cardField4])
     }

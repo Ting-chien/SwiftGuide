@@ -17,7 +17,7 @@ class BaseTextField: UITextField, UITextFieldDelegate {
     
     var manager: BaseTextFieldDelegate?
     
-    var defaultText: String = ""
+    var hiddenText: String = ""
     
     var viewcontroller: UIViewController? {
         var responder: UIResponder? = self.next
@@ -70,11 +70,11 @@ class BaseTextField: UITextField, UITextFieldDelegate {
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if let text = isSecure ? defaultText : textField.text, let range = Range(range, in: text) {
+        if let text = isSecure ? hiddenText : textField.text, let range = Range(range, in: text) {
             
             var newText = ""
             
-            // 驗證正則式
+            // 正則表達式
             if let regex = regularExpression?.rawValue {
                 let validator = RegexValidator(pattern: regex)
                 if validator.validate(input: string) {
@@ -86,19 +86,25 @@ class BaseTextField: UITextField, UITextFieldDelegate {
                 newText = text.replacingCharacters(in: range, with: string)
             }
             
-            // 驗證數字限制
+            // 數字限制
             if let limit = textLengthLimit, newText.count >= limit {
                 if newText.count == limit { self.text = newText }
                 self.manager?.moveToNextField(self)
                 return false
+            }
+            
+            // 隱碼設定
+            if isSecure {
+                hiddenText = newText
             }
         }
         return true
     }
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
-        // Undone
-        
+        if isSecure, let text = textField.text {
+            textField.text = String(text.map{ ($0 == "*" ? $0 : "*")})
+        }
     }
 
     // MARK: - Keyboard move up/down
