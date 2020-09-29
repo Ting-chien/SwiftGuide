@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		F43CE5872522255300A995F6 /* CustomTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43CE5862522255300A995F6 /* CustomTextFieldViewController.swift */; };
 		F43CE58B2522256800A995F6 /* CustomTextField.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43CE58A2522256800A995F6 /* CustomTextField.storyboard */; };
+		F44516FE2522CEFA00FC8B7B /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44516FD2522CEFA00FC8B7B /* BaseTextField.swift */; };
+		F44517022522CF0300FC8B7B /* RegexValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44516FF2522CF0300FC8B7B /* RegexValidator.swift */; };
+		F44517032522CF0300FC8B7B /* TextFieldManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44517002522CF0300FC8B7B /* TextFieldManager.swift */; };
+		F44517042522CF0300FC8B7B /* TapGestureHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44517012522CF0300FC8B7B /* TapGestureHelper.swift */; };
 		F44B9BC7248CB8BD00761436 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44B9BC6248CB8BD00761436 /* AppDelegate.swift */; };
 		F44B9BC9248CB8BD00761436 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44B9BC8248CB8BD00761436 /* SceneDelegate.swift */; };
 		F44B9BCB248CB8BD00761436 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44B9BCA248CB8BD00761436 /* MainViewController.swift */; };
@@ -20,6 +24,10 @@
 /* Begin PBXFileReference section */
 		F43CE5862522255300A995F6 /* CustomTextFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldViewController.swift; sourceTree = "<group>"; };
 		F43CE58A2522256800A995F6 /* CustomTextField.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomTextField.storyboard; sourceTree = "<group>"; };
+		F44516FD2522CEFA00FC8B7B /* BaseTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTextField.swift; sourceTree = "<group>"; };
+		F44516FF2522CF0300FC8B7B /* RegexValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexValidator.swift; sourceTree = "<group>"; };
+		F44517002522CF0300FC8B7B /* TextFieldManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldManager.swift; sourceTree = "<group>"; };
+		F44517012522CF0300FC8B7B /* TapGestureHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapGestureHelper.swift; sourceTree = "<group>"; };
 		F44B9BC3248CB8BD00761436 /* SwiftGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F44B9BC6248CB8BD00761436 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F44B9BC8248CB8BD00761436 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +65,32 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		F44516FA2522CEBB00FC8B7B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F44516FB2522CECF00FC8B7B /* BaseTextField */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F44516FB2522CECF00FC8B7B /* BaseTextField */ = {
+			isa = PBXGroup;
+			children = (
+				F44516FD2522CEFA00FC8B7B /* BaseTextField.swift */,
+			);
+			path = BaseTextField;
+			sourceTree = "<group>";
+		};
+		F44516FC2522CEE300FC8B7B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F44516FF2522CF0300FC8B7B /* RegexValidator.swift */,
+				F44517012522CF0300FC8B7B /* TapGestureHelper.swift */,
+				F44517002522CF0300FC8B7B /* TextFieldManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		F44B9BBA248CB8BD00761436 = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +110,8 @@
 		F44B9BC5248CB8BD00761436 /* SwiftGuide */ = {
 			isa = PBXGroup;
 			children = (
+				F44516FC2522CEE300FC8B7B /* Helpers */,
+				F44516FA2522CEBB00FC8B7B /* Views */,
 				F43CE5852522251500A995F6 /* Storyboards */,
 				F43CE584252224E000A995F6 /* Controllers */,
 				F44B9BC6248CB8BD00761436 /* AppDelegate.swift */,
@@ -161,8 +197,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F44517022522CF0300FC8B7B /* RegexValidator.swift in Sources */,
 				F44B9BCB248CB8BD00761436 /* MainViewController.swift in Sources */,
 				F43CE5872522255300A995F6 /* CustomTextFieldViewController.swift in Sources */,
+				F44517032522CF0300FC8B7B /* TextFieldManager.swift in Sources */,
+				F44516FE2522CEFA00FC8B7B /* BaseTextField.swift in Sources */,
+				F44517042522CF0300FC8B7B /* TapGestureHelper.swift in Sources */,
 				F44B9BC7248CB8BD00761436 /* AppDelegate.swift in Sources */,
 				F44B9BC9248CB8BD00761436 /* SceneDelegate.swift in Sources */,
 			);
