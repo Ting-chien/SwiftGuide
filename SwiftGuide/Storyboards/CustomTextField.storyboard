@@ -49,22 +49,54 @@
                                                             </textField>
                                                         </subviews>
                                                     </stackView>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="82M-us-RzN">
-                                                        <rect key="frame" x="30" y="623" width="314" height="34"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="ZRW-FN-L7Z">
+                                                        <rect key="frame" x="30" y="615" width="314" height="34"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hZ9-sl-Dq5" customClass="CustomTextField" customModule="SwiftGuide" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="68" height="34"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="68" id="sgk-RH-Egm"/>
+                                                                    <constraint firstAttribute="height" constant="34" id="xp7-Oz-e7s"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ac-NM-x0g" customClass="CustomTextField" customModule="SwiftGuide" customModuleProvider="target">
+                                                                <rect key="frame" x="82" y="0.0" width="68" height="34"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="68" id="0la-gf-ezK"/>
+                                                                    <constraint firstAttribute="height" constant="34" id="mDc-dg-R5K"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DXc-ZH-Avg" customClass="CustomTextField" customModule="SwiftGuide" customModuleProvider="target">
+                                                                <rect key="frame" x="164" y="0.0" width="68" height="34"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="34" id="U9u-8u-dId"/>
+                                                                    <constraint firstAttribute="width" constant="68" id="u3W-Lp-3nL"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h8S-NG-ulD" customClass="CustomTextField" customModule="SwiftGuide" customModuleProvider="target">
+                                                                <rect key="frame" x="246" y="0.0" width="68" height="34"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="68" id="ilb-uU-vUQ"/>
+                                                                    <constraint firstAttribute="height" constant="34" id="u1f-Na-i4q"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                    </stackView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
+                                                    <constraint firstItem="ZRW-FN-L7Z" firstAttribute="top" secondItem="bxD-l2-qhv" secondAttribute="bottom" constant="60" id="2Tj-ze-L21"/>
+                                                    <constraint firstItem="ZRW-FN-L7Z" firstAttribute="leading" secondItem="uk6-Lz-Nml" secondAttribute="leading" constant="30" id="4bG-Mq-8HH"/>
                                                     <constraint firstItem="bxD-l2-qhv" firstAttribute="centerX" secondItem="uk6-Lz-Nml" secondAttribute="centerX" id="ClR-8Z-Ysl"/>
                                                     <constraint firstAttribute="trailing" secondItem="bxD-l2-qhv" secondAttribute="trailing" constant="30" id="IeC-vd-7iP"/>
                                                     <constraint firstItem="bxD-l2-qhv" firstAttribute="leading" secondItem="uk6-Lz-Nml" secondAttribute="leading" constant="30" id="Jlp-b3-wuz"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ZRW-FN-L7Z" secondAttribute="trailing" constant="30" id="T5o-Vs-Y1J"/>
                                                     <constraint firstAttribute="height" constant="900" id="UIt-mD-WqE"/>
-                                                    <constraint firstAttribute="bottom" secondItem="82M-us-RzN" secondAttribute="bottom" constant="243" id="aOT-ho-kxW"/>
-                                                    <constraint firstItem="82M-us-RzN" firstAttribute="leading" secondItem="uk6-Lz-Nml" secondAttribute="leading" constant="30" id="y4A-eB-vKd"/>
-                                                    <constraint firstAttribute="trailing" secondItem="82M-us-RzN" secondAttribute="trailing" constant="30" id="y6N-SG-vXJ"/>
-                                                    <constraint firstItem="82M-us-RzN" firstAttribute="top" secondItem="bxD-l2-qhv" secondAttribute="bottom" constant="68" id="yK7-Pp-BVd"/>
+                                                    <constraint firstAttribute="bottom" secondItem="ZRW-FN-L7Z" secondAttribute="bottom" constant="251" id="WSR-7X-E0h"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -101,6 +133,10 @@
                         <outlet property="cardField2" destination="gUe-HN-bCh" id="KU1-ei-NUy"/>
                         <outlet property="cardField3" destination="gkG-05-Lf6" id="QBo-Ih-ESY"/>
                         <outlet property="cardField4" destination="bxc-No-Z0n" id="1e7-bM-lXi"/>
+                        <outlet property="customField1" destination="hZ9-sl-Dq5" id="qqA-2r-H96"/>
+                        <outlet property="customField2" destination="5ac-NM-x0g" id="3VA-P2-l36"/>
+                        <outlet property="customField3" destination="DXc-ZH-Avg" id="xeh-js-MVV"/>
+                        <outlet property="customField4" destination="h8S-NG-ulD" id="Zyf-tf-azD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EsP-9O-bTa" sceneMemberID="firstResponder"/>

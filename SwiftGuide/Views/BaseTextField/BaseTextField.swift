@@ -106,6 +106,11 @@ class BaseTextField: UITextField, UITextFieldDelegate {
             textField.text = String(text.map{ ($0 == "*" ? $0 : "*")})
         }
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 
     // MARK: - Keyboard move up/down
     

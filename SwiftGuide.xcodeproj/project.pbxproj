@@ -13,6 +13,8 @@
 		F44517022522CF0300FC8B7B /* RegexValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44516FF2522CF0300FC8B7B /* RegexValidator.swift */; };
 		F44517032522CF0300FC8B7B /* TextFieldManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44517002522CF0300FC8B7B /* TextFieldManager.swift */; };
 		F44517042522CF0300FC8B7B /* TapGestureHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44517012522CF0300FC8B7B /* TapGestureHelper.swift */; };
+		F44517072522F32A00FC8B7B /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44517062522F32A00FC8B7B /* CustomTextField.swift */; };
+		F44517092522F33800FC8B7B /* CustomTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = F44517082522F33800FC8B7B /* CustomTextField.xib */; };
 		F44B9BC7248CB8BD00761436 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44B9BC6248CB8BD00761436 /* AppDelegate.swift */; };
 		F44B9BC9248CB8BD00761436 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44B9BC8248CB8BD00761436 /* SceneDelegate.swift */; };
 		F44B9BCB248CB8BD00761436 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44B9BCA248CB8BD00761436 /* MainViewController.swift */; };
@@ -28,6 +30,8 @@
 		F44516FF2522CF0300FC8B7B /* RegexValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexValidator.swift; sourceTree = "<group>"; };
 		F44517002522CF0300FC8B7B /* TextFieldManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldManager.swift; sourceTree = "<group>"; };
 		F44517012522CF0300FC8B7B /* TapGestureHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapGestureHelper.swift; sourceTree = "<group>"; };
+		F44517062522F32A00FC8B7B /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		F44517082522F33800FC8B7B /* CustomTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTextField.xib; sourceTree = "<group>"; };
 		F44B9BC3248CB8BD00761436 /* SwiftGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F44B9BC6248CB8BD00761436 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F44B9BC8248CB8BD00761436 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +72,7 @@
 		F44516FA2522CEBB00FC8B7B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F44517052522F2FC00FC8B7B /* CustomTextField */,
 				F44516FB2522CECF00FC8B7B /* BaseTextField */,
 			);
 			path = Views;
@@ -89,6 +94,15 @@
 				F44517002522CF0300FC8B7B /* TextFieldManager.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F44517052522F2FC00FC8B7B /* CustomTextField */ = {
+			isa = PBXGroup;
+			children = (
+				F44517062522F32A00FC8B7B /* CustomTextField.swift */,
+				F44517082522F33800FC8B7B /* CustomTextField.xib */,
+			);
+			path = CustomTextField;
 			sourceTree = "<group>";
 		};
 		F44B9BBA248CB8BD00761436 = {
@@ -183,6 +197,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F44517092522F33800FC8B7B /* CustomTextField.xib in Resources */,
 				F44B9BD3248CB8BF00761436 /* LaunchScreen.storyboard in Resources */,
 				F43CE58B2522256800A995F6 /* CustomTextField.storyboard in Resources */,
 				F44B9BD0248CB8BF00761436 /* Assets.xcassets in Resources */,
@@ -205,6 +220,7 @@
 				F44517042522CF0300FC8B7B /* TapGestureHelper.swift in Sources */,
 				F44B9BC7248CB8BD00761436 /* AppDelegate.swift in Sources */,
 				F44B9BC9248CB8BD00761436 /* SceneDelegate.swift in Sources */,
+				F44517072522F32A00FC8B7B /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

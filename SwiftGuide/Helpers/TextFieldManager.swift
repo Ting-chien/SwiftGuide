@@ -11,27 +11,27 @@ import Foundation
 
 class TextFieldManager: NSObject, BaseTextFieldDelegate {
     
-    var textFields = [BaseTextField]()
+    var textFields = [CustomTextField]()
 
-    convenience init(textFields: [BaseTextField]) {
+    convenience init(textFields: [CustomTextField]) {
         self.init()
         self.textFields = textFields
-        self.textFields.forEach( {$0.manager = self})
+        self.textFields.forEach( {$0.field.manager = self})
     }
     
     func moveToNextField(_ textField: UITextField) {
         print("Move to next..")
         let nextTag = textField.tag + 1
-        if let nextTextField = textFields.filter({ ($0.tag == nextTag) }).first {
-            nextTextField.becomeFirstResponder()
+        if let nextResponder = textFields.filter({ ($0.field.tag == nextTag) }).first {
+            nextResponder.field.becomeFirstResponder()
         }
     }
     
     func moveToPrevField(_ textField: UITextField) {
         print("Move to prev..")
         let prevTag = textField.tag - 1
-        if let prevTextField = textFields.filter({ ($0.tag == prevTag) }).first {
-            prevTextField.becomeFirstResponder()
+        if let prevResponder = textFields.filter({ ($0.field.tag == prevTag) }).first {
+            prevResponder.field.becomeFirstResponder()
         }
     }
 
