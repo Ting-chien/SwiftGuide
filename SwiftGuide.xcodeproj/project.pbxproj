@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F40927D1252B16F600739853 /* SQLiteDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40927D0252B16F600739853 /* SQLiteDAO.swift */; };
+		F40927D4252B17A400739853 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F40927D3252B178E00739853 /* libsqlite3.tbd */; };
+		F40927D7252B205100739853 /* ExampleDB.db in Resources */ = {isa = PBXBuildFile; fileRef = F40927CD252B14B800739853 /* ExampleDB.db */; };
 		F43CE5872522255300A995F6 /* CustomTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43CE5862522255300A995F6 /* CustomTextFieldViewController.swift */; };
 		F43CE58B2522256800A995F6 /* CustomTextField.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43CE58A2522256800A995F6 /* CustomTextField.storyboard */; };
 		F44516FE2522CEFA00FC8B7B /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44516FD2522CEFA00FC8B7B /* BaseTextField.swift */; };
@@ -24,6 +27,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F40927CD252B14B800739853 /* ExampleDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = ExampleDB.db; sourceTree = "<group>"; };
+		F40927D0252B16F600739853 /* SQLiteDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteDAO.swift; sourceTree = "<group>"; };
+		F40927D3252B178E00739853 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		F40927D5252B17E300739853 /* BridgeHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeHeader.h; sourceTree = "<group>"; };
 		F43CE5862522255300A995F6 /* CustomTextFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldViewController.swift; sourceTree = "<group>"; };
 		F43CE58A2522256800A995F6 /* CustomTextField.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomTextField.storyboard; sourceTree = "<group>"; };
 		F44516FD2522CEFA00FC8B7B /* BaseTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTextField.swift; sourceTree = "<group>"; };
@@ -47,12 +54,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F40927D4252B17A400739853 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F40927CC252B12A400739853 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				F40927CD252B14B800739853 /* ExampleDB.db */,
+				F40927D5252B17E300739853 /* BridgeHeader.h */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		F40927CE252B16A300739853 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F40927CF252B16CC00739853 /* SQLiteDB */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F40927CF252B16CC00739853 /* SQLiteDB */ = {
+			isa = PBXGroup;
+			children = (
+				F40927D0252B16F600739853 /* SQLiteDAO.swift */,
+			);
+			path = SQLiteDB;
+			sourceTree = "<group>";
+		};
+		F40927D2252B178E00739853 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F40927D3252B178E00739853 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F43CE584252224E000A995F6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +151,7 @@
 			children = (
 				F44B9BC5248CB8BD00761436 /* SwiftGuide */,
 				F44B9BC4248CB8BD00761436 /* Products */,
+				F40927D2252B178E00739853 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,6 +166,8 @@
 		F44B9BC5248CB8BD00761436 /* SwiftGuide */ = {
 			isa = PBXGroup;
 			children = (
+				F40927CE252B16A300739853 /* Models */,
+				F40927CC252B12A400739853 /* Resource */,
 				F44516FC2522CEE300FC8B7B /* Helpers */,
 				F44516FA2522CEBB00FC8B7B /* Views */,
 				F43CE5852522251500A995F6 /* Storyboards */,
@@ -197,6 +241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F40927D7252B205100739853 /* ExampleDB.db in Resources */,
 				F44517092522F33800FC8B7B /* CustomTextField.xib in Resources */,
 				F44B9BD3248CB8BF00761436 /* LaunchScreen.storyboard in Resources */,
 				F43CE58B2522256800A995F6 /* CustomTextField.storyboard in Resources */,
@@ -214,6 +259,7 @@
 			files = (
 				F44517022522CF0300FC8B7B /* RegexValidator.swift in Sources */,
 				F44B9BCB248CB8BD00761436 /* MainViewController.swift in Sources */,
+				F40927D1252B16F600739853 /* SQLiteDAO.swift in Sources */,
 				F43CE5872522255300A995F6 /* CustomTextFieldViewController.swift in Sources */,
 				F44517032522CF0300FC8B7B /* TextFieldManager.swift in Sources */,
 				F44516FE2522CEFA00FC8B7B /* BaseTextField.swift in Sources */,
@@ -375,6 +421,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com..SwiftGuide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = SwiftGuide/Resource/BridgeHeader.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -393,6 +440,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com..SwiftGuide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = SwiftGuide/Resource/BridgeHeader.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

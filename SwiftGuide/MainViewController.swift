@@ -19,6 +19,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        SQLiteDAO.connectDB()
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
