@@ -9,7 +9,11 @@
 /* Begin PBXBuildFile section */
 		F40927D1252B16F600739853 /* SQLiteDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40927D0252B16F600739853 /* SQLiteDAO.swift */; };
 		F40927D4252B17A400739853 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F40927D3252B178E00739853 /* libsqlite3.tbd */; };
-		F40927D7252B205100739853 /* ExampleDB.db in Resources */ = {isa = PBXBuildFile; fileRef = F40927CD252B14B800739853 /* ExampleDB.db */; };
+		F4131872252EBA2D002E3DCB /* CompanyDB.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = F4131871252EBA2D002E3DCB /* CompanyDB.sqlite */; };
+		F4131874252EDF6D002E3DCB /* EmployeeDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4131873252EDF6D002E3DCB /* EmployeeDAO.swift */; };
+		F4131877252EE1D6002E3DCB /* EmployeeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4131876252EE1D6002E3DCB /* EmployeeModel.swift */; };
+		F413187A252EE246002E3DCB /* CommonEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4131879252EE246002E3DCB /* CommonEnums.swift */; };
+		F413187C252EF341002E3DCB /* DBbaseEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = F413187B252EF341002E3DCB /* DBbaseEnum.swift */; };
 		F43CE5872522255300A995F6 /* CustomTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43CE5862522255300A995F6 /* CustomTextFieldViewController.swift */; };
 		F43CE58B2522256800A995F6 /* CustomTextField.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43CE58A2522256800A995F6 /* CustomTextField.storyboard */; };
 		F44516FE2522CEFA00FC8B7B /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44516FD2522CEFA00FC8B7B /* BaseTextField.swift */; };
@@ -27,10 +31,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F40927CD252B14B800739853 /* ExampleDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = ExampleDB.db; sourceTree = "<group>"; };
 		F40927D0252B16F600739853 /* SQLiteDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteDAO.swift; sourceTree = "<group>"; };
 		F40927D3252B178E00739853 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		F40927D5252B17E300739853 /* BridgeHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeHeader.h; sourceTree = "<group>"; };
+		F4131871252EBA2D002E3DCB /* CompanyDB.sqlite */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CompanyDB.sqlite; sourceTree = "<group>"; };
+		F4131873252EDF6D002E3DCB /* EmployeeDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDAO.swift; sourceTree = "<group>"; };
+		F4131876252EE1D6002E3DCB /* EmployeeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeModel.swift; sourceTree = "<group>"; };
+		F4131879252EE246002E3DCB /* CommonEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonEnums.swift; sourceTree = "<group>"; };
+		F413187B252EF341002E3DCB /* DBbaseEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBbaseEnum.swift; sourceTree = "<group>"; };
 		F43CE5862522255300A995F6 /* CustomTextFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldViewController.swift; sourceTree = "<group>"; };
 		F43CE58A2522256800A995F6 /* CustomTextField.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomTextField.storyboard; sourceTree = "<group>"; };
 		F44516FD2522CEFA00FC8B7B /* BaseTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTextField.swift; sourceTree = "<group>"; };
@@ -64,8 +72,8 @@
 		F40927CC252B12A400739853 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				F40927CD252B14B800739853 /* ExampleDB.db */,
 				F40927D5252B17E300739853 /* BridgeHeader.h */,
+				F4131871252EBA2D002E3DCB /* CompanyDB.sqlite */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -73,6 +81,7 @@
 		F40927CE252B16A300739853 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F4131878252EE235002E3DCB /* CommonModels */,
 				F40927CF252B16CC00739853 /* SQLiteDB */,
 			);
 			path = Models;
@@ -81,7 +90,9 @@
 		F40927CF252B16CC00739853 /* SQLiteDB */ = {
 			isa = PBXGroup;
 			children = (
-				F40927D0252B16F600739853 /* SQLiteDAO.swift */,
+				F4131875252EE1C1002E3DCB /* DBmodels */,
+				F4A0F660252C634C00FFD2A7 /* DBbase */,
+				F4A0F65D252C630B00FFD2A7 /* DAOmodels */,
 			);
 			path = SQLiteDB;
 			sourceTree = "<group>";
@@ -92,6 +103,22 @@
 				F40927D3252B178E00739853 /* libsqlite3.tbd */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F4131875252EE1C1002E3DCB /* DBmodels */ = {
+			isa = PBXGroup;
+			children = (
+				F4131876252EE1D6002E3DCB /* EmployeeModel.swift */,
+			);
+			path = DBmodels;
+			sourceTree = "<group>";
+		};
+		F4131878252EE235002E3DCB /* CommonModels */ = {
+			isa = PBXGroup;
+			children = (
+				F4131879252EE246002E3DCB /* CommonEnums.swift */,
+			);
+			path = CommonModels;
 			sourceTree = "<group>";
 		};
 		F43CE584252224E000A995F6 /* Controllers */ = {
@@ -183,6 +210,23 @@
 			path = SwiftGuide;
 			sourceTree = "<group>";
 		};
+		F4A0F65D252C630B00FFD2A7 /* DAOmodels */ = {
+			isa = PBXGroup;
+			children = (
+				F4131873252EDF6D002E3DCB /* EmployeeDAO.swift */,
+			);
+			path = DAOmodels;
+			sourceTree = "<group>";
+		};
+		F4A0F660252C634C00FFD2A7 /* DBbase */ = {
+			isa = PBXGroup;
+			children = (
+				F40927D0252B16F600739853 /* SQLiteDAO.swift */,
+				F413187B252EF341002E3DCB /* DBbaseEnum.swift */,
+			);
+			path = DBbase;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -241,10 +285,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F40927D7252B205100739853 /* ExampleDB.db in Resources */,
 				F44517092522F33800FC8B7B /* CustomTextField.xib in Resources */,
 				F44B9BD3248CB8BF00761436 /* LaunchScreen.storyboard in Resources */,
 				F43CE58B2522256800A995F6 /* CustomTextField.storyboard in Resources */,
+				F4131872252EBA2D002E3DCB /* CompanyDB.sqlite in Resources */,
 				F44B9BD0248CB8BF00761436 /* Assets.xcassets in Resources */,
 				F44B9BCE248CB8BD00761436 /* Main.storyboard in Resources */,
 			);
@@ -258,8 +302,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F44517022522CF0300FC8B7B /* RegexValidator.swift in Sources */,
+				F413187C252EF341002E3DCB /* DBbaseEnum.swift in Sources */,
+				F4131874252EDF6D002E3DCB /* EmployeeDAO.swift in Sources */,
 				F44B9BCB248CB8BD00761436 /* MainViewController.swift in Sources */,
+				F4131877252EE1D6002E3DCB /* EmployeeModel.swift in Sources */,
 				F40927D1252B16F600739853 /* SQLiteDAO.swift in Sources */,
+				F413187A252EE246002E3DCB /* CommonEnums.swift in Sources */,
 				F43CE5872522255300A995F6 /* CustomTextFieldViewController.swift in Sources */,
 				F44517032522CF0300FC8B7B /* TextFieldManager.swift in Sources */,
 				F44516FE2522CEFA00FC8B7B /* BaseTextField.swift in Sources */,
