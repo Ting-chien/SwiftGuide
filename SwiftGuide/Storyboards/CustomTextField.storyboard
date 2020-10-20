@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -24,31 +24,6 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uk6-Lz-Nml" userLabel="ContentView2">
                                                 <rect key="frame" x="20" y="20" width="374" height="900"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="bxD-l2-qhv">
-                                                        <rect key="frame" x="30" y="521" width="314" height="34"/>
-                                                        <subviews>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="91K-R2-0xm" customClass="BaseTextField" customModule="TestingProject" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="68" height="34"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gUe-HN-bCh" customClass="BaseTextField" customModule="TestingProject" customModuleProvider="target">
-                                                                <rect key="frame" x="82" y="0.0" width="68" height="34"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gkG-05-Lf6" customClass="BaseTextField" customModule="TestingProject" customModuleProvider="target">
-                                                                <rect key="frame" x="164" y="0.0" width="68" height="34"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bxc-No-Z0n" customClass="BaseTextField" customModule="TestingProject" customModuleProvider="target">
-                                                                <rect key="frame" x="246" y="0.0" width="68" height="34"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                        </subviews>
-                                                    </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="ZRW-FN-L7Z">
                                                         <rect key="frame" x="30" y="615" width="314" height="34"/>
                                                         <subviews>
@@ -89,11 +64,7 @@
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstItem="ZRW-FN-L7Z" firstAttribute="top" secondItem="bxD-l2-qhv" secondAttribute="bottom" constant="60" id="2Tj-ze-L21"/>
                                                     <constraint firstItem="ZRW-FN-L7Z" firstAttribute="leading" secondItem="uk6-Lz-Nml" secondAttribute="leading" constant="30" id="4bG-Mq-8HH"/>
-                                                    <constraint firstItem="bxD-l2-qhv" firstAttribute="centerX" secondItem="uk6-Lz-Nml" secondAttribute="centerX" id="ClR-8Z-Ysl"/>
-                                                    <constraint firstAttribute="trailing" secondItem="bxD-l2-qhv" secondAttribute="trailing" constant="30" id="IeC-vd-7iP"/>
-                                                    <constraint firstItem="bxD-l2-qhv" firstAttribute="leading" secondItem="uk6-Lz-Nml" secondAttribute="leading" constant="30" id="Jlp-b3-wuz"/>
                                                     <constraint firstAttribute="trailing" secondItem="ZRW-FN-L7Z" secondAttribute="trailing" constant="30" id="T5o-Vs-Y1J"/>
                                                     <constraint firstAttribute="height" constant="900" id="UIt-mD-WqE"/>
                                                     <constraint firstAttribute="bottom" secondItem="ZRW-FN-L7Z" secondAttribute="bottom" constant="251" id="WSR-7X-E0h"/>
@@ -129,10 +100,6 @@
                         <viewLayoutGuide key="safeArea" id="tYz-lf-4yC"/>
                     </view>
                     <connections>
-                        <outlet property="cardField1" destination="91K-R2-0xm" id="Na3-Xn-N3C"/>
-                        <outlet property="cardField2" destination="gUe-HN-bCh" id="KU1-ei-NUy"/>
-                        <outlet property="cardField3" destination="gkG-05-Lf6" id="QBo-Ih-ESY"/>
-                        <outlet property="cardField4" destination="bxc-No-Z0n" id="1e7-bM-lXi"/>
                         <outlet property="customField1" destination="hZ9-sl-Dq5" id="qqA-2r-H96"/>
                         <outlet property="customField2" destination="5ac-NM-x0g" id="3VA-P2-l36"/>
                         <outlet property="customField3" destination="DXc-ZH-Avg" id="xeh-js-MVV"/>
@@ -142,6 +109,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EsP-9O-bTa" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="135.9375"/>
+        </scene>
+        <!--Custom Text Field View Controller-->
+        <scene sceneID="JZN-gW-2u9">
+            <objects>
+                <viewController id="Wvp-ek-a6J" customClass="CustomTextFieldViewController" customModule="SwiftGuide" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HMB-Az-RFX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q7I-H5-ALX" customClass="BaseTextField" customModule="SwiftGuide" customModuleProvider="target">
+                                <rect key="frame" x="100" y="753" width="214" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aL1-hg-HwJ" customClass="BaseTextField" customModule="SwiftGuide" customModuleProvider="target">
+                                <rect key="frame" x="100" y="669" width="214" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mPz-x4-A3H" firstAttribute="trailing" secondItem="aL1-hg-HwJ" secondAttribute="trailing" constant="100" id="9bQ-hO-JZi"/>
+                            <constraint firstItem="mPz-x4-A3H" firstAttribute="trailing" secondItem="Q7I-H5-ALX" secondAttribute="trailing" constant="100" id="CWj-nE-3BC"/>
+                            <constraint firstItem="mPz-x4-A3H" firstAttribute="bottom" secondItem="Q7I-H5-ALX" secondAttribute="bottom" constant="75" id="aXe-vu-JVS"/>
+                            <constraint firstItem="Q7I-H5-ALX" firstAttribute="leading" secondItem="mPz-x4-A3H" secondAttribute="leading" constant="100" id="bei-YN-h9z"/>
+                            <constraint firstItem="aL1-hg-HwJ" firstAttribute="leading" secondItem="mPz-x4-A3H" secondAttribute="leading" constant="100" id="evx-ze-ybc"/>
+                            <constraint firstItem="Q7I-H5-ALX" firstAttribute="top" secondItem="aL1-hg-HwJ" secondAttribute="bottom" constant="50" id="pFi-eS-qEm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mPz-x4-A3H"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="phu-hZ-PR4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="936" y="136"/>
         </scene>
     </scenes>
 </document>

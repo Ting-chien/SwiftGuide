@@ -127,6 +127,16 @@ class BaseTextField: UITextField, UITextFieldDelegate {
                 }
             }
         }
+        
+        if let view = viewcontroller?.view {
+            let frame = self.convert(self.bounds.origin, to: view)
+            let visibleHeight = view.frame.size.height - keyboardSize.height
+            let visiblePointY = frame.y + self.frame.size.height
+            if visiblePointY >= visibleHeight {
+                
+                view.frame.origin.y = -(visiblePointY - visibleHeight)
+            }
+        }
     }
     
     @objc func keyboardWillHide(noti: NSNotification) {
@@ -139,6 +149,11 @@ class BaseTextField: UITextField, UITextFieldDelegate {
                 }
             }
         }
+        
+        if let view = viewcontroller?.view {
+            view.frame.origin.y = 0
+        }
+        
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }

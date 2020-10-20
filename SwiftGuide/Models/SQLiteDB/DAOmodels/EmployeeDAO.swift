@@ -34,22 +34,9 @@ class EmployeeDAO: SQLiteDAO<EmployeeTable> {
         "position" : ""
     ]
     
-    func insert(_ entity: EmployeeModel) {
-        table[EmployeeTable.id.rawValue] = entity.id
-        table[EmployeeTable.name.rawValue] = entity.name
-        table[EmployeeTable.age.rawValue] = String(entity.age)
-        table[EmployeeTable.gender.rawValue] = entity.gender.rawValue
-        table[EmployeeTable.position.rawValue] = entity.position.rawValue
-        
-        insert(table)
-    }
+    func insert(_ entity: EmployeeModel) {}
     
-    func delete(_ id: String, _ name: String) {
-        table[EmployeeTable.id.rawValue] = id
-        table[EmployeeTable.name.rawValue] = name
-        
-        delete(table)
-    }
+    func delete(_ id: String, _ name: String) {}
     
     func update(_ id: String, _ name: String, _ entity: EmployeeModel) {}
     

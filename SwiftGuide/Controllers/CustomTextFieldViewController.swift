@@ -10,14 +10,7 @@ import UIKit
 
 class CustomTextFieldViewController: UIViewController {
 
-    var baseTextFields: TextFieldManager?
     var customTextFields: TextFieldManager?
-    
-    // Base UITextFields
-    @IBOutlet weak var cardField1: BaseTextField!
-    @IBOutlet weak var cardField2: BaseTextField!
-    @IBOutlet weak var cardField3: BaseTextField!
-    @IBOutlet weak var cardField4: BaseTextField!
     
     // Custom UITextField
     @IBOutlet weak var customField1: CustomTextField!
@@ -54,28 +47,5 @@ class CustomTextFieldViewController: UIViewController {
         
         customTextFields = TextFieldManager(textFields: [customField1, customField2, customField3, customField4])
     }
-    
-//    目前設定以CustomTextField裡面再包一層BaseTextField為準，因此暫不起用該方法
-//    func setUpBaseTextFields() {
-//
-//        // TextField1
-//        cardField1.textLengthLimit = 3
-//        cardField1.regularExpression = .Alphanumeric
-//        cardField1.placeholder = "Placeholder"
-//
-//        // TextField2
-//        cardField2.textLengthLimit = 5
-//        cardField2.regularExpression = .Email
-//        cardField2.textAlignment = .center
-//
-//        // TextField3
-//        cardField3.textLengthLimit = 1
-//        cardField3.regularExpression = .Number
-//        cardField3.keyboardType = .numberPad
-//
-//        // TextField4
-//        cardField4.isSecure = true
-//
-//        baseTextFields = TextFieldManager(textFields: [cardField1, cardField2, cardField3, cardField4])
-//    }
+
 }
