@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07E349CD2546B08800A5AC64 /* ImageDownloader.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07E349CC2546B08800A5AC64 /* ImageDownloader.storyboard */; };
+		07E349CF2546B0A200A5AC64 /* ImageDownloaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E349CE2546B0A200A5AC64 /* ImageDownloaderViewController.swift */; };
+		07E349D22546C86700A5AC64 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E349D12546C86700A5AC64 /* LoadingViewController.swift */; };
+		07E349D42546C87300A5AC64 /* LoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07E349D32546C87300A5AC64 /* LoadingViewController.xib */; };
+		07E349D62546CBB500A5AC64 /* LoadingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E349D52546CBB500A5AC64 /* LoadingHelper.swift */; };
 		F40927D1252B16F600739853 /* SQLiteDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40927D0252B16F600739853 /* SQLiteDAO.swift */; };
 		F40927D4252B17A400739853 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F40927D3252B178E00739853 /* libsqlite3.tbd */; };
 		F4131872252EBA2D002E3DCB /* CompanyDB.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = F4131871252EBA2D002E3DCB /* CompanyDB.sqlite */; };
@@ -31,6 +36,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07E349CC2546B08800A5AC64 /* ImageDownloader.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageDownloader.storyboard; sourceTree = "<group>"; };
+		07E349CE2546B0A200A5AC64 /* ImageDownloaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderViewController.swift; sourceTree = "<group>"; };
+		07E349D12546C86700A5AC64 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		07E349D32546C87300A5AC64 /* LoadingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingViewController.xib; sourceTree = "<group>"; };
+		07E349D52546CBB500A5AC64 /* LoadingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingHelper.swift; sourceTree = "<group>"; };
 		F40927D0252B16F600739853 /* SQLiteDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteDAO.swift; sourceTree = "<group>"; };
 		F40927D3252B178E00739853 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		F40927D5252B17E300739853 /* BridgeHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeHeader.h; sourceTree = "<group>"; };
@@ -69,6 +79,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07E349D02546C81E00A5AC64 /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				07E349D12546C86700A5AC64 /* LoadingViewController.swift */,
+				07E349D32546C87300A5AC64 /* LoadingViewController.xib */,
+			);
+			path = LoadingView;
+			sourceTree = "<group>";
+		};
 		F40927CC252B12A400739853 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				F43CE5862522255300A995F6 /* CustomTextFieldViewController.swift */,
+				07E349CE2546B0A200A5AC64 /* ImageDownloaderViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -133,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				F43CE58A2522256800A995F6 /* CustomTextField.storyboard */,
+				07E349CC2546B08800A5AC64 /* ImageDownloader.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -140,6 +161,7 @@
 		F44516FA2522CEBB00FC8B7B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				07E349D02546C81E00A5AC64 /* LoadingView */,
 				F44517052522F2FC00FC8B7B /* CustomTextField */,
 				F44516FB2522CECF00FC8B7B /* BaseTextField */,
 			);
@@ -160,6 +182,7 @@
 				F44516FF2522CF0300FC8B7B /* RegexValidator.swift */,
 				F44517012522CF0300FC8B7B /* TapGestureHelper.swift */,
 				F44517002522CF0300FC8B7B /* TextFieldManager.swift */,
+				07E349D52546CBB500A5AC64 /* LoadingHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -285,12 +308,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07E349CD2546B08800A5AC64 /* ImageDownloader.storyboard in Resources */,
 				F44517092522F33800FC8B7B /* CustomTextField.xib in Resources */,
 				F44B9BD3248CB8BF00761436 /* LaunchScreen.storyboard in Resources */,
 				F43CE58B2522256800A995F6 /* CustomTextField.storyboard in Resources */,
 				F4131872252EBA2D002E3DCB /* CompanyDB.sqlite in Resources */,
 				F44B9BD0248CB8BF00761436 /* Assets.xcassets in Resources */,
 				F44B9BCE248CB8BD00761436 /* Main.storyboard in Resources */,
+				07E349D42546C87300A5AC64 /* LoadingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,9 +328,12 @@
 			files = (
 				F44517022522CF0300FC8B7B /* RegexValidator.swift in Sources */,
 				F413187C252EF341002E3DCB /* DBbaseEnum.swift in Sources */,
+				07E349D62546CBB500A5AC64 /* LoadingHelper.swift in Sources */,
 				F4131874252EDF6D002E3DCB /* EmployeeDAO.swift in Sources */,
+				07E349D22546C86700A5AC64 /* LoadingViewController.swift in Sources */,
 				F44B9BCB248CB8BD00761436 /* MainViewController.swift in Sources */,
 				F4131877252EE1D6002E3DCB /* EmployeeModel.swift in Sources */,
+				07E349CF2546B0A200A5AC64 /* ImageDownloaderViewController.swift in Sources */,
 				F40927D1252B16F600739853 /* SQLiteDAO.swift in Sources */,
 				F413187A252EE246002E3DCB /* CommonEnums.swift in Sources */,
 				F43CE5872522255300A995F6 /* CustomTextFieldViewController.swift in Sources */,
