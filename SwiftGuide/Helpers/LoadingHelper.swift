@@ -11,24 +11,30 @@ import UIKit
 class LoadingHelper {
     
     static let shared: LoadingHelper = LoadingHelper()
-    private var window: UIWindow?
+    private var window: UIWindow!
     private var isLoading = false
     
     func showLoadingPage() {
         DispatchQueue.main.async {
             if !self.isLoading {
-                self.window = UIWindow(frame: UIScreen.main.bounds)
-                self.window?.windowLevel = .statusBar
-                self.window?.rootViewController = UIViewController()
-                self.window?.backgroundColor = nil
-                self.window?.isHidden = false
-                if #available(iOS 13, *) {
-                    self.window?.overrideUserInterfaceStyle = .light
+                let windowScene = UIApplication.shared
+                                .connectedScenes
+                                .filter { $0.activationState == .foregroundActive }
+                                .first
+                if let windowScene = windowScene as? UIWindowScene {
+                    self.window = UIWindow(windowScene: windowScene)
+                    self.window.windowLevel = .alert + 1
+                    self.window.rootViewController = UIViewController()
+                    self.window.backgroundColor = .clear
+                    self.window.makeKeyAndVisible()
+                    if #available(iOS 13, *) {
+                        self.window.overrideUserInterfaceStyle = .light
+                    }
                 }
                 
                 let loadingView = LoadingViewController()
                 loadingView.modalPresentationStyle = .fullScreen
-                self.window?.rootViewController?.present(loadingView, animated: false, completion: nil)
+                self.window.rootViewController?.present(loadingView, animated: false, completion: nil)
                 self.isLoading = true
             }
         }
