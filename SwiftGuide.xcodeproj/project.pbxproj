@@ -19,6 +19,10 @@
 		F4131877252EE1D6002E3DCB /* EmployeeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4131876252EE1D6002E3DCB /* EmployeeModel.swift */; };
 		F413187A252EE246002E3DCB /* CommonEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4131879252EE246002E3DCB /* CommonEnums.swift */; };
 		F413187C252EF341002E3DCB /* DBbaseEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = F413187B252EF341002E3DCB /* DBbaseEnum.swift */; };
+		F416446A25485EBC008E3D45 /* AlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F416446925485EBC008E3D45 /* AlertViewController.xib */; };
+		F416446C25485ED5008E3D45 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F416446B25485ED5008E3D45 /* AlertViewController.swift */; };
+		F416446E254860A2008E3D45 /* Functions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F416446D254860A2008E3D45 /* Functions.storyboard */; };
+		F4164470254860B1008E3D45 /* FunctionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F416446F254860B1008E3D45 /* FunctionsViewController.swift */; };
 		F43CE5872522255300A995F6 /* CustomTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43CE5862522255300A995F6 /* CustomTextFieldViewController.swift */; };
 		F43CE58B2522256800A995F6 /* CustomTextField.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43CE58A2522256800A995F6 /* CustomTextField.storyboard */; };
 		F44516FE2522CEFA00FC8B7B /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44516FD2522CEFA00FC8B7B /* BaseTextField.swift */; };
@@ -49,6 +53,10 @@
 		F4131876252EE1D6002E3DCB /* EmployeeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeModel.swift; sourceTree = "<group>"; };
 		F4131879252EE246002E3DCB /* CommonEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonEnums.swift; sourceTree = "<group>"; };
 		F413187B252EF341002E3DCB /* DBbaseEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBbaseEnum.swift; sourceTree = "<group>"; };
+		F416446925485EBC008E3D45 /* AlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertViewController.xib; sourceTree = "<group>"; };
+		F416446B25485ED5008E3D45 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		F416446D254860A2008E3D45 /* Functions.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Functions.storyboard; sourceTree = "<group>"; };
+		F416446F254860B1008E3D45 /* FunctionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionsViewController.swift; sourceTree = "<group>"; };
 		F43CE5862522255300A995F6 /* CustomTextFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldViewController.swift; sourceTree = "<group>"; };
 		F43CE58A2522256800A995F6 /* CustomTextField.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomTextField.storyboard; sourceTree = "<group>"; };
 		F44516FD2522CEFA00FC8B7B /* BaseTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTextField.swift; sourceTree = "<group>"; };
@@ -140,11 +148,21 @@
 			path = CommonModels;
 			sourceTree = "<group>";
 		};
+		F416446825485E9A008E3D45 /* AlertView */ = {
+			isa = PBXGroup;
+			children = (
+				F416446925485EBC008E3D45 /* AlertViewController.xib */,
+				F416446B25485ED5008E3D45 /* AlertViewController.swift */,
+			);
+			path = AlertView;
+			sourceTree = "<group>";
+		};
 		F43CE584252224E000A995F6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				F43CE5862522255300A995F6 /* CustomTextFieldViewController.swift */,
 				07E349CE2546B0A200A5AC64 /* ImageDownloaderViewController.swift */,
+				F416446F254860B1008E3D45 /* FunctionsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -154,6 +172,7 @@
 			children = (
 				F43CE58A2522256800A995F6 /* CustomTextField.storyboard */,
 				07E349CC2546B08800A5AC64 /* ImageDownloader.storyboard */,
+				F416446D254860A2008E3D45 /* Functions.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -161,6 +180,7 @@
 		F44516FA2522CEBB00FC8B7B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F416446825485E9A008E3D45 /* AlertView */,
 				07E349D02546C81E00A5AC64 /* LoadingView */,
 				F44517052522F2FC00FC8B7B /* CustomTextField */,
 				F44516FB2522CECF00FC8B7B /* BaseTextField */,
@@ -310,11 +330,13 @@
 			files = (
 				07E349CD2546B08800A5AC64 /* ImageDownloader.storyboard in Resources */,
 				F44517092522F33800FC8B7B /* CustomTextField.xib in Resources */,
+				F416446A25485EBC008E3D45 /* AlertViewController.xib in Resources */,
 				F44B9BD3248CB8BF00761436 /* LaunchScreen.storyboard in Resources */,
 				F43CE58B2522256800A995F6 /* CustomTextField.storyboard in Resources */,
 				F4131872252EBA2D002E3DCB /* CompanyDB.sqlite in Resources */,
 				F44B9BD0248CB8BF00761436 /* Assets.xcassets in Resources */,
 				F44B9BCE248CB8BD00761436 /* Main.storyboard in Resources */,
+				F416446E254860A2008E3D45 /* Functions.storyboard in Resources */,
 				07E349D42546C87300A5AC64 /* LoadingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,6 +350,7 @@
 			files = (
 				F44517022522CF0300FC8B7B /* RegexValidator.swift in Sources */,
 				F413187C252EF341002E3DCB /* DBbaseEnum.swift in Sources */,
+				F4164470254860B1008E3D45 /* FunctionsViewController.swift in Sources */,
 				07E349D62546CBB500A5AC64 /* LoadingHelper.swift in Sources */,
 				F4131874252EDF6D002E3DCB /* EmployeeDAO.swift in Sources */,
 				07E349D22546C86700A5AC64 /* LoadingViewController.swift in Sources */,
@@ -339,6 +362,7 @@
 				F43CE5872522255300A995F6 /* CustomTextFieldViewController.swift in Sources */,
 				F44517032522CF0300FC8B7B /* TextFieldManager.swift in Sources */,
 				F44516FE2522CEFA00FC8B7B /* BaseTextField.swift in Sources */,
+				F416446C25485ED5008E3D45 /* AlertViewController.swift in Sources */,
 				F44517042522CF0300FC8B7B /* TapGestureHelper.swift in Sources */,
 				F44B9BC7248CB8BD00761436 /* AppDelegate.swift in Sources */,
 				F44B9BC9248CB8BD00761436 /* SceneDelegate.swift in Sources */,
