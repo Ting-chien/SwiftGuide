@@ -34,5 +34,75 @@ class ImageDownloaderViewController: UIViewController {
             }.resume()
         }
     }
+    
+    // MARK: Grand Centrail Dispatch Examples
+    
+    func syncQueue() {
+        let queue = DispatchQueue(label: "com.appcoda.queue")
+        
+        queue.sync {
+            for i in 0..<100 {
+                print("🔴", i)
+            }
+        }
+
+        for i in 100..<200 {
+            print("🤗", i)
+        }
+        
+    }
+    
+    func asyncQueue() {
+        
+        let queue1 = DispatchQueue(label: "com.appcoda.queue1", qos: .background)
+        let queue2 = DispatchQueue(label: "com.appcoda.queue2", qos: .userInitiated)
+
+        queue1.async {
+            for i in 0..<100 {
+                print("🔴", i)
+            }
+        }
+
+        queue2.async {
+            for i in 100..<200 {
+                print("🔵", i)
+            }
+        }
+        
+    }
+    
+    func concurrentQueues() {
+        let queue = DispatchQueue(label: "com.appcoda.queue", qos: .utility, attributes: .concurrent)
+        
+        queue.async {
+            for i in 0..<100 {
+                print("🔴", i)
+            }
+        }
+        
+        queue.async {
+            for i in 100..<200 {
+                print("🔵", i)
+            }
+        }
+        
+        queue.async {
+            for i in 1000..<1100 {
+                print("🤗", i)
+            }
+        }
+        
+    }
+    
+    func queueWithDelay() {
+        
+        let additionalTime: DispatchTimeInterval = .seconds(3)
+        let delayQueue = DispatchQueue(label: "com.appcoda.delayqueue", qos: .userInitiated)
+        
+        print(Date())
+        delayQueue.asyncAfter(deadline: .now() + additionalTime) {
+            print(Date())
+        }
+    }
 
 }
