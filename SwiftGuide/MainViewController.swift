@@ -24,11 +24,6 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.tableView.dataSource = self
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-    }
-    
     func numberOfSections(in tableView: UITableView) -> Int {
         return categoryList.count
     }
@@ -64,62 +59,6 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         let storyboard = UIStoryboard(name: identifier, bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: identifier+"ViewController")
         self.navigationController?.pushViewController(controller, animated: true)
-    }
-    
-    // MARK: Grand Centrail Dispatch
-    func implentGCD() {
-        
-        let queue1 = DispatchQueue(label: "com.appcoda.queue1", qos: DispatchQoS.userInitiated)
-        let queue2 = DispatchQueue(label: "com.appcoda.queue2", qos: DispatchQoS.utility)
-        
-        queue1.async {
-            for i in 0..<100 {
-                print("🔴", i)
-            }
-        }
-        
-        queue2.async {
-            for i in 100..<200 {
-                print("🔵", i)
-            }
-        }
-        
-        for i in 1000..<1100 {
-            print("🤗", i)
-        }
-        
-    }
-    
-    func concurrentQueues() {
-        let queue = DispatchQueue(label: "com.appcoda.queue", qos: .utility, attributes: .concurrent)
-        
-        queue.async {
-            for i in 0..<100 {
-                print("🔴", i)
-            }
-        }
-        
-        queue.async {
-            for i in 100..<200 {
-                print("🔵", i)
-            }
-        }
-        
-        queue.async {
-            for i in 1000..<1100 {
-                print("🤗", i)
-            }
-        }
-        
-    }
-    
-    func queueWithDelay() {
-        let delayQueue = DispatchQueue(label: "com.appcoda.delayqueue", qos: .userInitiated)
-        print(Date())
-        let additionalTime: DispatchTimeInterval = .seconds(3)
-        delayQueue.asyncAfter(deadline: .now() + additionalTime) {
-            print(Date())
-        }
     }
 
 }
