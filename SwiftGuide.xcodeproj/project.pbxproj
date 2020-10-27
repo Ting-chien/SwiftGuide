@@ -12,8 +12,6 @@
 		07E349D22546C86700A5AC64 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E349D12546C86700A5AC64 /* LoadingViewController.swift */; };
 		07E349D42546C87300A5AC64 /* LoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07E349D32546C87300A5AC64 /* LoadingViewController.xib */; };
 		07E349D62546CBB500A5AC64 /* LoadingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E349D52546CBB500A5AC64 /* LoadingHelper.swift */; };
-		07E349DA25482A9400A5AC64 /* ValidationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07E349D825482A9400A5AC64 /* ValidationViewController.xib */; };
-		07E349DB25482A9400A5AC64 /* ValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E349D925482A9400A5AC64 /* ValidationViewController.swift */; };
 		F40927D1252B16F600739853 /* SQLiteDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40927D0252B16F600739853 /* SQLiteDAO.swift */; };
 		F40927D4252B17A400739853 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F40927D3252B178E00739853 /* libsqlite3.tbd */; };
 		F4131872252EBA2D002E3DCB /* CompanyDB.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = F4131871252EBA2D002E3DCB /* CompanyDB.sqlite */; };
@@ -43,8 +41,6 @@
 		07E349D12546C86700A5AC64 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		07E349D32546C87300A5AC64 /* LoadingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingViewController.xib; sourceTree = "<group>"; };
 		07E349D52546CBB500A5AC64 /* LoadingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingHelper.swift; sourceTree = "<group>"; };
-		07E349D825482A9400A5AC64 /* ValidationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ValidationViewController.xib; path = ../../../../texpress_v5_ios/TExpress/TExpress/View/QRcodeValidator/ValidationViewController.xib; sourceTree = "<group>"; };
-		07E349D925482A9400A5AC64 /* ValidationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ValidationViewController.swift; path = ../../../../texpress_v5_ios/TExpress/TExpress/View/QRcodeValidator/ValidationViewController.swift; sourceTree = "<group>"; };
 		F40927D0252B16F600739853 /* SQLiteDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteDAO.swift; sourceTree = "<group>"; };
 		F40927D3252B178E00739853 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		F40927D5252B17E300739853 /* BridgeHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeHeader.h; sourceTree = "<group>"; };
@@ -90,15 +86,6 @@
 				07E349D32546C87300A5AC64 /* LoadingViewController.xib */,
 			);
 			path = LoadingView;
-			sourceTree = "<group>";
-		};
-		07E349D725482A6500A5AC64 /* AlertView */ = {
-			isa = PBXGroup;
-			children = (
-				07E349D925482A9400A5AC64 /* ValidationViewController.swift */,
-				07E349D825482A9400A5AC64 /* ValidationViewController.xib */,
-			);
-			path = AlertView;
 			sourceTree = "<group>";
 		};
 		F40927CC252B12A400739853 /* Resource */ = {
@@ -174,7 +161,6 @@
 		F44516FA2522CEBB00FC8B7B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				07E349D725482A6500A5AC64 /* AlertView */,
 				07E349D02546C81E00A5AC64 /* LoadingView */,
 				F44517052522F2FC00FC8B7B /* CustomTextField */,
 				F44516FB2522CECF00FC8B7B /* BaseTextField */,
@@ -326,7 +312,6 @@
 				F44517092522F33800FC8B7B /* CustomTextField.xib in Resources */,
 				F44B9BD3248CB8BF00761436 /* LaunchScreen.storyboard in Resources */,
 				F43CE58B2522256800A995F6 /* CustomTextField.storyboard in Resources */,
-				07E349DA25482A9400A5AC64 /* ValidationViewController.xib in Resources */,
 				F4131872252EBA2D002E3DCB /* CompanyDB.sqlite in Resources */,
 				F44B9BD0248CB8BF00761436 /* Assets.xcassets in Resources */,
 				F44B9BCE248CB8BD00761436 /* Main.storyboard in Resources */,
@@ -342,7 +327,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F44517022522CF0300FC8B7B /* RegexValidator.swift in Sources */,
-				07E349DB25482A9400A5AC64 /* ValidationViewController.swift in Sources */,
 				F413187C252EF341002E3DCB /* DBbaseEnum.swift in Sources */,
 				07E349D62546CBB500A5AC64 /* LoadingHelper.swift in Sources */,
 				F4131874252EDF6D002E3DCB /* EmployeeDAO.swift in Sources */,
