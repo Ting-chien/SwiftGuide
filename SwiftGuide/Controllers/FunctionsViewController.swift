@@ -10,6 +10,15 @@ import UIKit
 
 class FunctionsViewController: UIViewController {
 
+    @IBOutlet weak var alertButton: UIButton! {
+        didSet {
+            alertButton.backgroundColor = .blue
+            alertButton.setTitle("Alert Button", for: .normal)
+            alertButton.setTitleColor(.white, for: .normal)
+            alertButton.layer.cornerRadius = 5
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

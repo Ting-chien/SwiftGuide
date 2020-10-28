@@ -15,9 +15,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TH8-VL-igH">
-                                <rect key="frame" x="184" y="433" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TH8-VL-igH">
+                                <rect key="frame" x="157" y="433" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="3VZ-rw-9Bs"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="alertHandler:" destination="om0-Y0-U1N" eventType="touchUpInside" id="sMM-QU-Xpd"/>
@@ -25,8 +27,15 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="TH8-VL-igH" firstAttribute="centerY" secondItem="PFd-8C-Inc" secondAttribute="centerY" id="Zdc-io-pQJ"/>
+                            <constraint firstItem="TH8-VL-igH" firstAttribute="centerX" secondItem="PFd-8C-Inc" secondAttribute="centerX" id="xVd-Mu-Gtl"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="P7H-GU-7v4"/>
                     </view>
+                    <connections>
+                        <outlet property="alertButton" destination="TH8-VL-igH" id="nHg-X9-sjL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1nQ-p3-H4J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

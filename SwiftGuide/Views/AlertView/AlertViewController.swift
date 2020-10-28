@@ -11,7 +11,13 @@ import UIKit
 class AlertViewController: UIViewController {
     
     private var window: UIWindow!
-    @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var contentView: UIView! {
+        didSet {
+            contentView.layer.cornerRadius = 5
+            contentView.layer.shadowOpacity = 0.21
+            contentView.layer.shadowOffset = CGSize(width: 0, height: 1)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

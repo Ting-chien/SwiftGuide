@@ -14,16 +14,39 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view alpha="0.5" contentMode="scaleToFill" id="84c-V8-Qec">
+        <view contentMode="scaleToFill" id="84c-V8-Qec">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bcx-6e-KKd">
                     <rect key="frame" x="83" y="179" width="248" height="538"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is Alert View !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cA4-Xj-zfg">
+                            <rect key="frame" x="10" y="10" width="228" height="20.5"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                            <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hRY-Wc-9RR">
+                            <rect key="frame" x="10" y="40.5" width="228" height="203"/>
+                            <string key="text">Warning! Wanging! Warning! Warning! Wanging! Warning! Warning! Wanging! Warning! Warning! Wanging! Warning! Warning! Wanging! Warning! Warning! Wanging! Warning! Warning! Wanging! Warning! Warning! Wanging! Warning! Warning! Wanging! Warning! Warning! Wanging! Warning! </string>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="0.85648544520547942" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="cA4-Xj-zfg" secondAttribute="trailing" constant="10" id="34k-cj-ibZ"/>
+                        <constraint firstAttribute="trailing" secondItem="hRY-Wc-9RR" secondAttribute="trailing" constant="10" id="HyE-FO-QXC"/>
+                        <constraint firstItem="cA4-Xj-zfg" firstAttribute="leading" secondItem="Bcx-6e-KKd" secondAttribute="leading" constant="10" id="bMs-gd-blD"/>
+                        <constraint firstItem="hRY-Wc-9RR" firstAttribute="top" secondItem="cA4-Xj-zfg" secondAttribute="bottom" constant="10" id="mmk-pN-R6U"/>
+                        <constraint firstItem="cA4-Xj-zfg" firstAttribute="top" secondItem="Bcx-6e-KKd" secondAttribute="top" constant="10" id="rha-fQ-QUu"/>
+                        <constraint firstItem="hRY-Wc-9RR" firstAttribute="leading" secondItem="Bcx-6e-KKd" secondAttribute="leading" constant="10" id="wVs-Kk-neM"/>
+                    </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+            <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Bcx-6e-KKd" firstAttribute="centerY" secondItem="84c-V8-Qec" secondAttribute="centerY" id="GJ1-nJ-ZzU"/>
                 <constraint firstItem="Bcx-6e-KKd" firstAttribute="width" secondItem="84c-V8-Qec" secondAttribute="width" multiplier="0.6" id="aRO-me-WJk"/>
