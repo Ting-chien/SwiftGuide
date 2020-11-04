@@ -37,6 +37,9 @@
 		F44B9BCE248CB8BD00761436 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F44B9BCC248CB8BD00761436 /* Main.storyboard */; };
 		F44B9BD0248CB8BF00761436 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F44B9BCF248CB8BF00761436 /* Assets.xcassets */; };
 		F44B9BD3248CB8BF00761436 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F44B9BD1248CB8BF00761436 /* LaunchScreen.storyboard */; };
+		F45406A72552A50A00698821 /* WebService.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F45406A62552A50A00698821 /* WebService.storyboard */; };
+		F45406A92552A52300698821 /* WebServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45406A82552A52300698821 /* WebServiceViewController.swift */; };
+		F45406AC2552AD9200698821 /* WSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45406AB2552AD9200698821 /* WSManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +76,9 @@
 		F44B9BCF248CB8BF00761436 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F44B9BD2248CB8BF00761436 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F44B9BD4248CB8BF00761436 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F45406A62552A50A00698821 /* WebService.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebService.storyboard; sourceTree = "<group>"; };
+		F45406A82552A52300698821 /* WebServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceViewController.swift; sourceTree = "<group>"; };
+		F45406AB2552AD9200698821 /* WSManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +114,7 @@
 		F40927CE252B16A300739853 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F45406AA2552AB1400698821 /* WebService */,
 				F4131878252EE235002E3DCB /* CommonModels */,
 				F40927CF252B16CC00739853 /* SQLiteDB */,
 			);
@@ -163,6 +170,7 @@
 				F43CE5862522255300A995F6 /* CustomTextFieldViewController.swift */,
 				07E349CE2546B0A200A5AC64 /* ImageDownloaderViewController.swift */,
 				F416446F254860B1008E3D45 /* FunctionsViewController.swift */,
+				F45406A82552A52300698821 /* WebServiceViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -173,6 +181,7 @@
 				F43CE58A2522256800A995F6 /* CustomTextField.storyboard */,
 				07E349CC2546B08800A5AC64 /* ImageDownloader.storyboard */,
 				F416446D254860A2008E3D45 /* Functions.storyboard */,
+				F45406A62552A50A00698821 /* WebService.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -251,6 +260,14 @@
 				F44B9BD4248CB8BF00761436 /* Info.plist */,
 			);
 			path = SwiftGuide;
+			sourceTree = "<group>";
+		};
+		F45406AA2552AB1400698821 /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				F45406AB2552AD9200698821 /* WSManager.swift */,
+			);
+			path = WebService;
 			sourceTree = "<group>";
 		};
 		F4A0F65D252C630B00FFD2A7 /* DAOmodels */ = {
@@ -333,6 +350,7 @@
 				F416446A25485EBC008E3D45 /* AlertViewController.xib in Resources */,
 				F44B9BD3248CB8BF00761436 /* LaunchScreen.storyboard in Resources */,
 				F43CE58B2522256800A995F6 /* CustomTextField.storyboard in Resources */,
+				F45406A72552A50A00698821 /* WebService.storyboard in Resources */,
 				F4131872252EBA2D002E3DCB /* CompanyDB.sqlite in Resources */,
 				F44B9BD0248CB8BF00761436 /* Assets.xcassets in Resources */,
 				F44B9BCE248CB8BD00761436 /* Main.storyboard in Resources */,
@@ -363,6 +381,8 @@
 				F44517032522CF0300FC8B7B /* TextFieldManager.swift in Sources */,
 				F44516FE2522CEFA00FC8B7B /* BaseTextField.swift in Sources */,
 				F416446C25485ED5008E3D45 /* AlertViewController.swift in Sources */,
+				F45406A92552A52300698821 /* WebServiceViewController.swift in Sources */,
+				F45406AC2552AD9200698821 /* WSManager.swift in Sources */,
 				F44517042522CF0300FC8B7B /* TapGestureHelper.swift in Sources */,
 				F44B9BC7248CB8BD00761436 /* AppDelegate.swift in Sources */,
 				F44B9BC9248CB8BD00761436 /* SceneDelegate.swift in Sources */,
