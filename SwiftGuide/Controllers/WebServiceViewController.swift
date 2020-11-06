@@ -12,7 +12,7 @@ class WebServiceViewController: UIViewController, UITableViewDelegate, UITableVi
 
     @IBOutlet weak var tableView: UITableView!
     
-    let methods = ["GET", "POST"]
+    let methods = ["GetWithURL", "GetWithHeader", "PostWithJson", "PostWithUrlEncode", "PostWithFormData"]
     
     let baseGetURL = "https://httpbin.org/get"
     let basePostURL = "https://httpbin.org/post"
@@ -42,30 +42,36 @@ class WebServiceViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let manager = WSManager()
+        let manager = HttpRequestExample()
         
         switch indexPath.row {
         case 0:
             manager.requestWithUrl(urlString: baseGetURL, parameters: getParameters) { (data) -> (Void) in
                 print(data.parseData().description)
             }
+        case 1:
+            manager.requestWithHeader(urlString: baseGetURL, parameters: getHeaders) { (data) -> (Void) in
+                print(data.parseData().description)
+            }
+        case 2:
+            manager.requestWithJSONBody(urlString: basePostURL, parameters: postJSON) { (data) -> (Void) in
+                print(data.parseData().description)
+            }
+        case 3:
+            manager.requestWithUrlencoded(urlString: basePostURL, parameters: postURLencoded) { (data) -> (Void) in
+                print(data.parseData().description)
+            }
+        case 4:
+            let image = UIImage(named: "maxresdefault")
+            let imageData = image?.jpegData(compressionQuality: 0.1)
+            manager.requestWithFormData(urlString: basePostURL, parameters: postFormData, dataPath: ["file": imageData!]) { (data) in
+                print(data.parseData().description)
+            }
         default:
             break
         }
+        
+        tableView.deselectRow(at: indexPath, animated: false)
     }
     
-}
-
-extension Data{
-    func parseData() -> NSDictionary{
-        
-        let dataDict = try? JSONSerialization.jsonObject(with: self, options: .mutableContainers) as! NSDictionary
-        
-        return dataDict!
-    }
-    
-    mutating func appendString(string: String) {
-        let data = string.data(using: String.Encoding.utf8, allowLossyConversion: true)
-        append(data!)
-    }
 }
