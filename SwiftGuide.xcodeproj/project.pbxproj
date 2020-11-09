@@ -37,10 +37,16 @@
 		F44B9BCE248CB8BD00761436 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F44B9BCC248CB8BD00761436 /* Main.storyboard */; };
 		F44B9BD0248CB8BF00761436 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F44B9BCF248CB8BF00761436 /* Assets.xcassets */; };
 		F44B9BD3248CB8BF00761436 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F44B9BD1248CB8BF00761436 /* LaunchScreen.storyboard */; };
+		F4527FB82558E4D000ABD5E6 /* HttpNaiveBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4527FB72558E4D000ABD5E6 /* HttpNaiveBase.swift */; };
 		F45406A72552A50A00698821 /* WebService.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F45406A62552A50A00698821 /* WebService.storyboard */; };
 		F45406A92552A52300698821 /* WebServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45406A82552A52300698821 /* WebServiceViewController.swift */; };
 		F4C3DE4F255545500004EFCB /* HttpRequestExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C3DE4E255545500004EFCB /* HttpRequestExample.swift */; };
 		F4C3DE52255546290004EFCB /* DataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C3DE51255546290004EFCB /* DataExtension.swift */; };
+		F4C3DE5625554BFA0004EFCB /* WS_BinPostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C3DE5525554BFA0004EFCB /* WS_BinPostModel.swift */; };
+		F4C3DE5825554C300004EFCB /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C3DE5725554C300004EFCB /* Request.swift */; };
+		F4C3DE5A25554C460004EFCB /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C3DE5925554C460004EFCB /* HttpClient.swift */; };
+		F4C3DE5C25554C750004EFCB /* Adapters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C3DE5B25554C750004EFCB /* Adapters.swift */; };
+		F4C3DE5E25554C7E0004EFCB /* Decisions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C3DE5D25554C7E0004EFCB /* Decisions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,10 +83,16 @@
 		F44B9BCF248CB8BF00761436 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F44B9BD2248CB8BF00761436 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F44B9BD4248CB8BF00761436 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4527FB72558E4D000ABD5E6 /* HttpNaiveBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpNaiveBase.swift; sourceTree = "<group>"; };
 		F45406A62552A50A00698821 /* WebService.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebService.storyboard; sourceTree = "<group>"; };
 		F45406A82552A52300698821 /* WebServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceViewController.swift; sourceTree = "<group>"; };
 		F4C3DE4E255545500004EFCB /* HttpRequestExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequestExample.swift; sourceTree = "<group>"; };
 		F4C3DE51255546290004EFCB /* DataExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtension.swift; sourceTree = "<group>"; };
+		F4C3DE5525554BFA0004EFCB /* WS_BinPostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WS_BinPostModel.swift; sourceTree = "<group>"; };
+		F4C3DE5725554C300004EFCB /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		F4C3DE5925554C460004EFCB /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
+		F4C3DE5B25554C750004EFCB /* Adapters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adapters.swift; sourceTree = "<group>"; };
+		F4C3DE5D25554C7E0004EFCB /* Decisions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decisions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,7 +280,10 @@
 		F45406AA2552AB1400698821 /* WebService */ = {
 			isa = PBXGroup;
 			children = (
+				F4C3DE54255549A50004EFCB /* APIs */,
+				F4C3DE53255549960004EFCB /* Base */,
 				F4C3DE4E255545500004EFCB /* HttpRequestExample.swift */,
+				F4527FB72558E4D000ABD5E6 /* HttpNaiveBase.swift */,
 			);
 			path = WebService;
 			sourceTree = "<group>";
@@ -296,6 +311,25 @@
 				F4C3DE51255546290004EFCB /* DataExtension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		F4C3DE53255549960004EFCB /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F4C3DE5725554C300004EFCB /* Request.swift */,
+				F4C3DE5925554C460004EFCB /* HttpClient.swift */,
+				F4C3DE5B25554C750004EFCB /* Adapters.swift */,
+				F4C3DE5D25554C7E0004EFCB /* Decisions.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		F4C3DE54255549A50004EFCB /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				F4C3DE5525554BFA0004EFCB /* WS_BinPostModel.swift */,
+			);
+			path = APIs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,6 +412,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F44517022522CF0300FC8B7B /* RegexValidator.swift in Sources */,
+				F4C3DE5825554C300004EFCB /* Request.swift in Sources */,
 				F413187C252EF341002E3DCB /* DBbaseEnum.swift in Sources */,
 				F4164470254860B1008E3D45 /* FunctionsViewController.swift in Sources */,
 				07E349D62546CBB500A5AC64 /* LoadingHelper.swift in Sources */,
@@ -388,14 +423,19 @@
 				F4131877252EE1D6002E3DCB /* EmployeeModel.swift in Sources */,
 				07E349CF2546B0A200A5AC64 /* ImageDownloaderViewController.swift in Sources */,
 				F40927D1252B16F600739853 /* SQLiteDAO.swift in Sources */,
+				F4C3DE5E25554C7E0004EFCB /* Decisions.swift in Sources */,
 				F413187A252EE246002E3DCB /* CommonEnums.swift in Sources */,
 				F43CE5872522255300A995F6 /* CustomTextFieldViewController.swift in Sources */,
 				F44517032522CF0300FC8B7B /* TextFieldManager.swift in Sources */,
+				F4C3DE5A25554C460004EFCB /* HttpClient.swift in Sources */,
 				F44516FE2522CEFA00FC8B7B /* BaseTextField.swift in Sources */,
 				F416446C25485ED5008E3D45 /* AlertViewController.swift in Sources */,
 				F45406A92552A52300698821 /* WebServiceViewController.swift in Sources */,
+				F4C3DE5C25554C750004EFCB /* Adapters.swift in Sources */,
 				F44517042522CF0300FC8B7B /* TapGestureHelper.swift in Sources */,
+				F4C3DE5625554BFA0004EFCB /* WS_BinPostModel.swift in Sources */,
 				F44B9BC7248CB8BD00761436 /* AppDelegate.swift in Sources */,
+				F4527FB82558E4D000ABD5E6 /* HttpNaiveBase.swift in Sources */,
 				F44B9BC9248CB8BD00761436 /* SceneDelegate.swift in Sources */,
 				F4C3DE52255546290004EFCB /* DataExtension.swift in Sources */,
 				F44517072522F32A00FC8B7B /* CustomTextField.swift in Sources */,
