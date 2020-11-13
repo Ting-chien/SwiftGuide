@@ -161,3 +161,9 @@ client.send(request) { (res: Result<HttpBinPostResult, Error>) in
     }
 }
  */
+
+let request = HttpNaiveRequest(
+    url: URL(string: "https://httpbin.org/post")!,
+    method: "POST", parameters: ["foo": "bar"],
+    headers: ["Content-Type": "application/x-www-form-urlencoded"]
+)

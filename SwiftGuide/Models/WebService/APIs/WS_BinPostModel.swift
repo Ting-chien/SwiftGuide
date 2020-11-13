@@ -8,13 +8,22 @@
 
 import Foundation
 
-class WS_BinPostRequestModel {
+struct WS_BinPostRequestModel: Request {
     
     typealias Response = WS_BinPostResponseModel
     
+    let foo: String
+    
+    let url = URL(string: "https://httpbin.org/post")!
+    let method = HttpMethod.POST
+    let contentType = ContentType.urlForm
+    var parameters: [String : Any] {
+        return ["foo": foo]
+    }
     
 }
 
-class WS_BinPostResponseModel {
-    
+struct WS_BinPostResponseModel: Codable {
+    struct Form: Codable { let foo: String }
+    let form: Form
 }
