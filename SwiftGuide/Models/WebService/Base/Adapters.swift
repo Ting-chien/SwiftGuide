@@ -47,6 +47,7 @@ struct UrlQueryDataAdapter: RequestAdapter {
     let data: [String:Any]
     func adapted(_ request: URLRequest) throws -> URLRequest {
         // 實作GET的請求方式
+        return request
     }
 }
 
@@ -54,6 +55,7 @@ struct JsonRequestDataAdapter: RequestAdapter {
     let data: [String:Any]
     func adapted(_ request: URLRequest) throws -> URLRequest {
         // 實作POST的請求方式，並透過JSON body的格式
+        return request
     }
 }
 
@@ -61,6 +63,7 @@ struct UrlRequestDataAdapter: RequestAdapter {
     let data: [String:Any]
     func adapted(_ request: URLRequest) throws -> URLRequest {
         // 實作GET的請求方式，並透過URL encoded的格式
+        return request
     }
 }
 
