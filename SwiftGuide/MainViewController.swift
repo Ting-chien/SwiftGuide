@@ -13,7 +13,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var tableView: UITableView!
     
     let categoryList = [
-        ["CustomTextField", "ImageDownloader", "Functions", "WebService"]
+        ["CustomTextField", "ImageDownloader", "Functions", "WebService", "WKWebView"]
     ]
 
     override func viewDidLoad() {
